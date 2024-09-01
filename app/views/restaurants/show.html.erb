@@ -1,0 +1,10 @@
+<h1>restaurant <%= @restaurants.name %></h1>
+
+<p>rating: <%= @restaurants.rating %></p>
+<p>located in : <%= @restaurants.address %></p>
+
+<%= link_to "Back to all restaurants", restaurants_path%>
+<%= link_to "Delete",
+restaurant_path(@restaurants),
+ data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
